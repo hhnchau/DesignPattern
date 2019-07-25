@@ -3,6 +3,7 @@ package vn.ptt.designpattern;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import vn.ptt.designpattern.Abstract.AbstractClazz;
 import vn.ptt.designpattern.BuilderPattern.User;
 
 public class MainActivity extends AppCompatActivity {
@@ -20,6 +21,9 @@ public class MainActivity extends AppCompatActivity {
                 .address("Ba Vi")
                 .age(23)
                 .build();
+
+
+        String s = AbstractClazz.getInstance().getString();
 
     }
 }
