@@ -5,6 +5,8 @@ import android.os.Bundle;
 
 import vn.ptt.designpattern.Abstract.AbstractClazz;
 import vn.ptt.designpattern.BuilderPattern.User;
+import vn.ptt.designpattern.DependencyInjection.House;
+import vn.ptt.designpattern.DependencyInjection.Weather;
 import vn.ptt.designpattern.FactoryPattern.Shape;
 import vn.ptt.designpattern.FactoryPattern.ShapeFactory;
 import vn.ptt.designpattern.ObserverPattern.Class1;
@@ -62,5 +64,9 @@ public class MainActivity extends AppCompatActivity {
         System.out.println("Second state change: 10");
         subject.setState(10);
         ///////////////
+        Weather weather = new Weather();
+        House house = new House(weather);
+        house.lookThroughWindow();
+        //////////
     }
 }
